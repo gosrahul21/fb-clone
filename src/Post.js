@@ -5,7 +5,7 @@ import ThumbsUpIcon from '@material-ui/icons/ThumbUpAlt'
 import CommentIcon from '@material-ui/icons/Comment'
 import ShareIcon from '@material-ui/icons/Share'
 import './Post.css'
-function Post({profilepic,userName,message,image}) {
+function Post({profilepic,userName,message,image,timestamp}) {
     const [like , setLike] = useState("");
 
     const likeClick = () => {
@@ -20,7 +20,7 @@ function Post({profilepic,userName,message,image}) {
                 <Avatar className= "post__avatar" src = {profilepic}/>
                 <div className="post__topInfo">
                     <h3>{userName}</h3>
-                    <p>TimeStamp...</p>
+                    <p>{new Date(timestamp.toDate()).toUTCString()}</p>
 
                 </div>
             </div>

@@ -3,15 +3,17 @@ import './Sidebar.css'
 import './SidebarRow'
 import SidebarRow from './SidebarRow'
 import AddIcon from '@material-ui/icons/Add'
+import HomeIcon from '@material-ui/icons/Home';
 import GroupIcon from '@material-ui/icons/Group'
 import EmojiFlagsIcon from '@material-ui/icons/EmojiFlags'
 import PeopleIcon from '@material-ui/icons/People'
 import ChatIcon from '@material-ui/icons/Chat'
-
-function Sidebar() {
+import {useStateValue} from './StateProvider'
+function Sidebar() {                                                                                                                                                                            
+    const [{user},dispatch] = useStateValue();
     return (
         <div className="sidebar">
-            <SidebarRow title="Rahul Goswami"   src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvdjc5MS10YW5nLTM1LnBuZw.png?s=aLxshBxLcykO2UAnr6F0Nzhqtdx6iR6UuKi4bFSTzC8"/>
+            <SidebarRow title= {user.displayName}   src={user.photoURL}/>
             <SidebarRow title = "Pages" Icon={EmojiFlagsIcon} />
             
             <SidebarRow 
@@ -23,94 +25,20 @@ function Sidebar() {
             title = "Messenger" 
             Icon={ChatIcon} 
             />
-
             <SidebarRow 
-            title = "Groups" 
-            Icon={GroupIcon}
+            title = "Group" 
+            Icon={GroupIcon} 
             />
-             <SidebarRow 
-            title = "Friends" 
-            Icon={PeopleIcon}
-            />
-
             <SidebarRow 
-            title = "Messenger" 
-            Icon={ChatIcon} 
+            title = "Marketplace" 
+            Icon={HomeIcon} 
             />
+            
+           
+            
+            
 
-            <SidebarRow 
-            title = "Groups" 
-            Icon={GroupIcon}
-            />
-             <SidebarRow 
-            title = "Friends" 
-            Icon={PeopleIcon}
-            />
-
-            <SidebarRow 
-            title = "Messenger" 
-            Icon={ChatIcon} 
-            />
-
-            <SidebarRow 
-            title = "Groups" 
-            Icon={GroupIcon}
-            />
-             <SidebarRow 
-            title = "Friends" 
-            Icon={PeopleIcon}
-            />
-
-            <SidebarRow 
-            title = "Messenger" 
-            Icon={ChatIcon} 
-            />
-
-            <SidebarRow 
-            title = "Groups" 
-            Icon={GroupIcon}
-            />
-             <SidebarRow 
-            title = "Friends" 
-            Icon={PeopleIcon}
-            />
-
-            <SidebarRow 
-            title = "Messenger" 
-            Icon={ChatIcon} 
-            />
-
-            <SidebarRow 
-            title = "Groups" 
-            Icon={GroupIcon}
-            />
-             <SidebarRow 
-            title = "Friends" 
-            Icon={PeopleIcon}
-            />
-
-            <SidebarRow 
-            title = "Messenger" 
-            Icon={ChatIcon} 
-            />
-
-            <SidebarRow 
-            title = "Groups" 
-            Icon={GroupIcon}
-            /> <SidebarRow 
-            title = "Friends" 
-            Icon={PeopleIcon}
-            />
-
-            <SidebarRow 
-            title = "Messenger" 
-            Icon={ChatIcon} 
-            />
-
-            <SidebarRow 
-            title = "Groups" 
-            Icon={GroupIcon}
-            />
+            
         </div>
     )
 }

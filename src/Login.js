@@ -1,16 +1,28 @@
 import React,{useState} from 'react'
 import './Login.css'
 import {auth,provider,signInWithPopup} from './firebase';
+import {actionTypes} from './reducer'
+import {useStateValue} from './StateProvider'
 function Login() {
 
     const [emailPhone, setEmailPhone] = useState("");
     const [password,setPassword] = useState("")
+    const [state,dispatchRedux] = useStateValue();
 
-    const signIn = () => {
-        signInWithPopup(auth,provider).then(result=> console.log(result)).catch(()=>console.log('error'))
+    const signIn = (e) => {
+        e.preventDefault();
+        signInWithPopup(auth,provider)
+        .then(result=> {
+            const {user} = result
+            dispatchRedux({
+                type:actionTypes.SET_USER,
+                user
+            });
+        })
+        .catch(()=>console.log('error'))
     }
 
-    
+
     return (
         <div className="login">
             
@@ -24,6 +36,7 @@ function Login() {
                     <input type="text" onChange={(e)=>setEmailPhone(e.target.value)} value={emailPhone}  placeholder="Email address or phone number"/>
                     <input type = "password" onChange={(e)=>setPassword(e.target.value)} value={password} placeholder="password"/>
                     <button type="submit" value="Login"> Log In</button>
+                    <button  onClick = {signIn} value="Login"> Sign In with Google</button>
                     <a href="#">Forgotten Password?</a>
                 </form>
 

@@ -5,6 +5,9 @@
     border-radius: 15px;
     background-color: white;
     box-shadow: 0px 5px 7px -7px rgba(0,0,0,0.75);
+    max-width: 650px;
+    
+
     
 }
 
@@ -34,6 +37,7 @@
 .post__topInfo >h3{
     font-size: medium;
 }
+
 
 .post__image >img{
     width: 100%;

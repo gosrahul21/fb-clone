@@ -3,7 +3,7 @@
     flex-direction: column;
     scroll-behavior: smooth;
     overflow-y:hidden;
-    /* position:; */
+    position:fixed;
     left:0;
     /* height:95vh; */
     width: 350px;
