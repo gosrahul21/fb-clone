@@ -1,0 +1,131 @@
+.login{
+    display: flex;
+    background-color: rgba(211, 211, 211, 0.301);
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+}
+.login__logo {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   height: 300px;
+   max-width: 550px;
+   margin-right:100px;
+   
+}
+
+.login__logo> h1 {
+    padding-left:30px;
+    font-weight: 300;
+
+}
+
+.login > .login__logo > img {
+    width: 330px;;
+}
+
+.login > .logo__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__right > .input__box> form   {
+    display: flex;
+    flex-direction: column;
+    padding:5px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
+
+
+}
+.logo__right > .input__box{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding:10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.411);
+
+}
+
+
+.input__box >form > a {
+    color:rgb(0, 119, 255);
+    font-weight: 200;
+    text-decoration: none;
+    margin-top: 10px;;
+    margin-bottom: 15px;
+
+}
+
+.input__box >form > a:hover {
+    text-decoration: underline;
+}
+
+.input__box >form > input {
+    font-size: 17px;
+    padding: 14px 16px;
+    border:none;
+    color:gray;
+    /* outline:none; */
+    outline-color: rgba(0, 110, 255, 0.603);
+    box-shadow: 0 0 0 1px rgba(128, 128, 128, 0.658);
+    border-radius: 5px;
+    width: 330px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.input__box > form > input:focus{
+   /* box-shadow: 0 0 1px 3px rgba(10, 132, 231, 0.658);; */
+   /* outline: 1px solid gray; */
+}
+
+.input__box > form > button {
+    width: 100%;
+    border:none;
+    border-radius: 5px;
+    color:white;
+    font-size:large;
+    font-weight: 600;
+    cursor: pointer;
+    padding:14px 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(41, 109, 235, 0.973);
+}
+
+
+
+.input__box > button {
+    padding:10px 15px;
+    font-size: large;
+    font-weight: 600;
+    background-color: #42b72a;
+    color:#fff;
+    border-radius: 6px;
+    margin-top:15px;
+    margin-bottom: 10px;;
+    border:none;
+    outline:none;
+    cursor: pointer;
+}
+/* 
+
+
+
+
+
+
+
+
+
+
+
+ */

@@ -6,7 +6,7 @@ import Widgets from './Widgets'
 import Login from './Login'
 import './App.css'
 function App() {
-  const user = "null"
+  const user = null
   return <div className="app">
       {/* header */}
       {user?<>
