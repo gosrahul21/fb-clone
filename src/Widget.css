@@ -1,0 +1,9 @@
+.widget{
+    height: 100%;
+}
+
+.widget > iframe {
+    height:100%;
+    width: 340;
+}
+

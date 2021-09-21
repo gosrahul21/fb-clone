@@ -1,0 +1,27 @@
+.sidebar{
+    display:flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    overflow-y:hidden;
+    /* position:; */
+    left:0;
+    /* height:95vh; */
+    width: 350px;
+}
+
+
+.sidebar:hover{
+    overflow-y: auto;
+
+}
+
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;               /* width of the entire scrollbar */
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.507);    /* color of the scroll thumb */
+    border-radius: 10px ;/*       roundness of the scroll thumb */
+    /* border: 3px solid orange;  creates padding around scroll thumb */
+  }

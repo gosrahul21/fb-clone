@@ -1,0 +1,66 @@
+.dialog__post{
+    width:500px;
+}
+
+.dialog__post > .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.dialog__post > .header > h3{
+    margin-left:37%;
+}
+
+.add_to_your_post {
+    display: flex;
+    padding:5px 10px;
+    border-radius: 10px;
+    align-items: center;
+    border:0.5px solid rgba(128, 128, 128, 0.651);
+    flex-direction: row;
+}
+.add_to_your_post > h3 {
+    flex:1;
+}
+.dialog__post__body{
+    padding:10px;
+}
+.dialog__body__header{
+    display: flex;
+    flex-direction: row;
+
+}
+.name{
+    margin-left:10px;
+}
+
+.dialog__input__body > textarea{
+    outline:none;
+    border:none;
+    padding:10px;
+    font-size: larger;
+    border-style: none;
+    resize: none;
+    max-height:500px;
+    overflow-y:none;
+    text-decoration: none;
+    width:90%;
+}
+.dialog__post__body > button
+ {
+    width:100%;
+    padding:10px;
+    color:white;
+    font-size: medium;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #1e75f8;
+}
+.dialog__post__body > button:active{
+    transform: scale(.99);
+}
