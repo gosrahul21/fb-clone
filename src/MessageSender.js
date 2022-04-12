@@ -17,6 +17,9 @@ function MessageSender() {
     const [showDialog,setShowDialog] = useState(false)
     const [{user:{displayName,photoURL}},dispatch] = useStateValue();
     const [reel,setReel] = useState("")
+    const [message, setMessage] = useState("");
+    const [image,setImage] = useState("")
+    
 
     const  imageSetting = async (e) => {
         const file = e.target.files[0]
@@ -58,7 +61,8 @@ function MessageSender() {
                     <MoodIcon fontSize="large" style={{color:"orange"}}/><h4>Feeling/Activity</h4>
                 </div>
             </div>
-            <DialogPost open={showDialog} setOpen = {setShowDialog} photoURL={photoURL} displayName={displayName} />
+            <DialogPost open={showDialog} setOpen = {setShowDialog} photoURL={photoURL} message={message} setImage={setImage}
+            setMessage={setMessage} image={image} displayName={displayName} />
         </div>
     )
 }

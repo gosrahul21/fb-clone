@@ -11,9 +11,7 @@ import db from './firebase'
 import { collection ,addDoc} from '@firebase/firestore';
 
 import './DialogPost.css'
-function DialogPost({open,setOpen,photoURL,displayName}) {
-    const [message, setMessage] = useState("");
-    const [image,setImage] = useState("")
+function DialogPost({open,setOpen,photoURL,displayName,message, setMessage,image,setImage}) {
 
     const onSubmit = (e)=>{
         setOpen(false)
@@ -81,7 +79,7 @@ function DialogPost({open,setOpen,photoURL,displayName}) {
                      </div>
                 </div>
                 <div className="dialog__input__body">
-                    <textarea type="text"  onChange ={(e)=> setMessage(e.target.value)} placeholder="Whats on your Mind"/>
+                    <textarea type="text"  onChange ={(e)=> setMessage(e.target.value)} value = {message} placeholder="Whats on your Mind"/>
                 </div>
                 <div className="add_to_your_post">
                     <h3>Add to Your Post</h3>

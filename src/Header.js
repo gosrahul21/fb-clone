@@ -12,9 +12,11 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ForumIcon from '@material-ui/icons/Forum';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { useStateValue } from './StateProvider';
+import {getIdToken, signOut} from 'firebase/auth'
+import { auth } from './firebase';
 export default function Header() {
     const [{user},dispatch] = useStateValue()
-  
+    // auth.currentUser();
     return (
         <div className="header">
             <div className="header__left">
@@ -51,7 +53,7 @@ export default function Header() {
             <div className="header__right">
                 <div className="header__info">
                     <Avatar src={user.photoURL}/>
-                    <h4>Rahul</h4>
+                    <h4>{user.displayName?.split(" ")[0]}</h4>
                 </div>
                 <IconButton>
                     <AddIcon/>
@@ -59,14 +61,15 @@ export default function Header() {
                 <IconButton>
                     <ForumIcon/>
                 </IconButton>
-                <IconButton>
+                <IconButton onClick = {()=> console.log(getIdToken(auth.currentUser).then(console.log))}>
                     <NotificationsActiveIcon/>
                 </IconButton>
-                <IconButton>
+                <IconButton onClick = {()=>signOut(auth).then(()=>console.log('user signout'))}>
                     <ExpandMoreIcon/>
                 </IconButton>
 
             </div>
         </div>
+
     )
 }

@@ -12,3 +12,34 @@
 body::-webkit-scrollbar {
      overflow: hidden;         /* width of the entire scrollbar */
   }
+
+  @media screen and (max-width:900px) {
+      .sidebar {
+          display: none;
+      }
+      .widget{
+          display: none;
+      }
+      .header__left{
+          display: none;
+      }
+
+      .feed{
+          width: 100%;
+      }
+
+      .story{
+          /* width:auto;
+          height: 100%; */
+      }
+      .post{
+          width: 100%;
+      }
+      .messageSender{
+          width:100%;
+      }
+      .messageSender__row2>.options{
+          padding:10px;
+      }
+      
+  }
